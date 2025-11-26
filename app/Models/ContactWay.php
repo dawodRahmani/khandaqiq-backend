@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class ContactWay extends Model
+{
+    use HasFactory;
+
+    protected $table = 'contact_ways';
+
+    protected $fillable = [
+        'language_id',
+        'title',
+        'address',
+        'email_1',
+        'email_2',
+        'phone_1',
+        'phone_2',
+    ];
+
+    public function language()
+    {
+        return $this->belongsTo(Language::class);
+    }
+}
