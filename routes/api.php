@@ -38,5 +38,7 @@ Route::middleware('api')->group(function () {
     Route::apiResource('languages', App\Http\Controllers\Api\LanguagesController::class);
     Route::apiResource('partnerships', App\Http\Controllers\Api\PartnershipsController::class);
     Route::get('settings', [App\Http\Controllers\Api\SettingController::class, 'index']);
+    Route::post('transfer-request', [App\Http\Controllers\Api\TransferRequestController::class, 'store']);
+    Route::post('contact-messages', [App\Http\Controllers\Api\ContactMessagesController::class, 'store']);
     // Add more controllers as needed
 });

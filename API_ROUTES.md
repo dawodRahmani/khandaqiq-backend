@@ -689,34 +689,14 @@ The application includes a Filament admin panel for managing all content. Access
 
 
 
+i have two part front end with react and backend with laravel api and dashboard with fillametn i want you to work on a specific page and make its content dynamic /contact and in the database for it i made 2 Contact Us
+connect way
 
-
-
-
-
+ there is a form in the contact us it should be sent to an email info@khandaqiq.com
+  add data to databse and make the front end dynamic , note : make a to do list for yourself for better work and ask me anything for better resrult , consider 3 language 
  
 
- 
 
-INDUSTRIAL PROCESSING & MINERALS in images  
-
-hero section make it like the hero section in home page 
-
-
-
-
-
-product page 
-products 
-
-product detail pop up
-
-
-
-
-sectore 
-
-pages 
-
-contact us 
+there is a table called location maps it has title , Latitude*
+, Longitude*,Address, make a seeder for it and according to that it should show the google map at the end of contact us page before footer 
 

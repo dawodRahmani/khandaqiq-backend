@@ -14,7 +14,7 @@ class Logisticopration extends Model
     protected $fillable = [
         'language_id',
         'title',
-        'importend',
+        'important',
         'description',
         'image',
         'sort',
