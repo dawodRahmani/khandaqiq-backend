@@ -14,6 +14,7 @@ class FollowUsForm
             TextInput::make('instagram_link')->required(),
             TextInput::make('facebook_link')->required(),
             TextInput::make('youtube_link')->required(),
+            TextInput::make('x_link')->label('X (Twitter) Link'),
             Toggle::make('is_active')->required(),
         ]);
     }

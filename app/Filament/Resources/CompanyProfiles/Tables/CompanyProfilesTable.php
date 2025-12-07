@@ -1,32 +1,34 @@
 <?php
 
-namespace App\Filament\Resources\FollowUs\Tables;
+namespace App\Filament\Resources\CompanyProfiles\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class FollowUsTable
+class CompanyProfilesTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('instagram_link')
+                TextColumn::make('language.name')
+                    ->label('Language')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('title')
                     ->searchable(),
-                TextColumn::make('facebook_link')
-                    ->searchable(),
-                TextColumn::make('youtube_link')
-                    ->searchable(),
-                TextColumn::make('x_link')
-                    ->label('X (Twitter)')
-                    ->searchable(),
-                IconColumn::make('isActive')
-                    ->boolean(),
+                ImageColumn::make('thumbnail'),
+                TextColumn::make('file')
+                    ->label('File')
+                    ->limit(30),
+                TextColumn::make('sort')
+                    ->numeric()
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

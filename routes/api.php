@@ -40,5 +40,8 @@ Route::middleware('api')->group(function () {
     Route::get('settings', [App\Http\Controllers\Api\SettingController::class, 'index']);
     Route::post('transfer-request', [App\Http\Controllers\Api\TransferRequestController::class, 'store']);
     Route::post('contact-messages', [App\Http\Controllers\Api\ContactMessagesController::class, 'store']);
+    Route::apiResource('profile-pages', App\Http\Controllers\Api\ProfilePagesController::class);
+    Route::apiResource('company-profiles', App\Http\Controllers\Api\CompanyProfilesController::class);
+    Route::apiResource('annual-reports', App\Http\Controllers\Api\AnnualReportsController::class);
     // Add more controllers as needed
 });

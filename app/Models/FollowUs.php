@@ -10,6 +10,7 @@ class FollowUs extends Model
         'instagram_link',
         'facebook_link',
         'youtube_link',
+        'x_link',
         'is_active',
     ];
 

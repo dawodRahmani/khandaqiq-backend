@@ -1,23 +1,24 @@
 <?php
 
-namespace App\Filament\Resources\FollowUs\Schemas;
+namespace App\Filament\Resources\CompanyProfiles\Schemas;
 
-use Filament\Infolists\Components\IconEntry;
+use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 
-class FollowUsInfolist
+class CompanyProfileInfolist
 {
     public static function configure(Schema $schema): Schema
     {
         return $schema
             ->components([
-                TextEntry::make('instagram_link'),
-                TextEntry::make('facebook_link'),
-                TextEntry::make('youtube_link'),
-                TextEntry::make('x_link')->label('X (Twitter)'),
-                IconEntry::make('isActive')
-                    ->boolean(),
+                TextEntry::make('language.name')->label('Language'),
+                TextEntry::make('title'),
+                ImageEntry::make('thumbnail'),
+                TextEntry::make('file')
+                    ->label('File Path'),
+                TextEntry::make('sort')
+                    ->numeric(),
                 TextEntry::make('created_at')
                     ->dateTime()
                     ->placeholder('-'),
